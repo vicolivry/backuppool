@@ -6,23 +6,22 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 12:25:41 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/13 15:14:37 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/14 18:43:47 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	int		i;
-	int		index;
+	unsigned int		i;
 
 	i = 0;
-	index = 0;
 	while (i < n)
 	{
-		dest[index] = src[index];
+		if (src[i])
+			dest[i] = src[i];
+		else
+			dest[i] = '\0';
 		i++;
-		index++;
 	}
-	dest[index] = '\0';
 	return (dest);
 }

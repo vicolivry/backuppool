@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 20:55:11 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/14 11:43:45 by volivry          ###   ########.fr       */
+/*   Created: 2017/09/14 16:03:54 by volivry           #+#    #+#             */
+/*   Updated: 2017/09/14 18:03:01 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcapitalize(char *str)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[0] >= 97 && str[0] <= 122)
-			str[0] = str[0] - 32;
-		if (str[i] <= 47 || (str[i] >= 58 && str[i] <= 64)
-				|| (str[i] >= 91 && str[i] <= 96) || str[i] >= 123)
-		{
-			if (str[i + 1] >= 97 && str[i + 1] <= 122)
-				str[i + 1] = str[i + 1] - 32;
-		}
+	j = 0;
+	while (dest[i])
 		i++;
+	while (j < nb)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	str[i + 1] = '\n';
-	return (str);
+	return (dest);
 }

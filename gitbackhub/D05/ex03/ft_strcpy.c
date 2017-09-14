@@ -6,7 +6,7 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/13 11:32:44 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/13 11:41:37 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/14 18:44:19 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,5 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i + 1] = '\0';
 	return (dest);
 }
