@@ -6,7 +6,7 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 18:00:35 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/14 19:36:35 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/15 10:32:17 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		i++;
 		j++;
 	}
-	return (i + ft_strlen(src));
+	return (i + ft_strlen(src) - 1);
 }
 
 #include <stdio.h>
@@ -46,12 +46,12 @@ int main()
 	char dest[] = "Coucou";
 	char src[] = " les nazes";
 	ft_strlcat(dest, src, 17);
-	printf("%s\n", dest);
-	//	printf("%d\n", ft_strlcat(dest, src, 9));
+//	printf("%s\n", dest);
+	printf("%d\n", ft_strlcat(dest, src, 17));
 	char dest2[45] = "Coucou";
 	char src2[] = " les nazes";
 	strlcat(dest2, src2, 17);
-	printf("%s\n", dest2);
-	//	printf("%lu\n", strlcat(dest2, src2, 9));
+//	printf("%s\n", dest2);
+	printf("%lu\n", strlcat(dest2, src2, 17));
 	return (0);
 }

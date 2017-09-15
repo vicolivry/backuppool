@@ -5,17 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/08 20:05:12 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/15 11:27:28 by volivry          ###   ########.fr       */
+/*   Created: 2017/09/15 16:32:59 by volivry           #+#    #+#             */
+/*   Updated: 2017/09/15 16:38:43 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i])
+	{
+		ft_putchar(str[i]);
 		i++;
-	return (i);
+	}
 }

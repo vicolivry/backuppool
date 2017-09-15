@@ -6,7 +6,7 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 20:10:39 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/14 20:38:14 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/15 10:22:56 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,13 @@ int		base_check(char *str)
 	{
 		while (str[j])
 		{
-			if ((str[i] == str[j]) || !(str[i] >= 32 && str[i] <= 126))
+			if (str[i] == str[j])
 				k = 1;
 			j++;
 		}
+		if ((str[i] >= 0 && str[i] <= 31) || str[i] == 43 || str[i] == 45
+				|| str[i] == 127)
+			k = 1;
 		i++;
 	}
 	return (k);
@@ -72,6 +75,6 @@ void	ft_putnbr_base(int nbr, char *base)
 
 int		main()
 {
-	ft_putnbr_base(1234, "gChjA");
+	ft_putnbr_base(1238, "A+BCD");
 	return (0);
 }

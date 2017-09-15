@@ -6,7 +6,7 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/08 20:05:12 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/12 09:47:31 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/15 10:44:24 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_putstr(char *str)
 	int i;
 
 	i = 0;
-	while (*(str + i) != '\0')
+	while (str[i])
 	{
-		ft_putchar(*(str + i));
+		ft_putchar(str[i]);
 		i++;
 	}
 }
