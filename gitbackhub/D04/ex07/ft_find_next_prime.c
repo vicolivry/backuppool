@@ -6,13 +6,11 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/12 11:31:01 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/12 15:15:58 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/17 09:11:57 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
 	int	i;
 
@@ -32,18 +30,12 @@ int ft_is_prime(int nb)
 	return (1);
 }
 
-int ft_find_next_prime(int nb)
+int	ft_find_next_prime(int nb)
 {
 	while (ft_is_prime(nb) == 0)
 	{
 		ft_is_prime(nb + 1);
-		nb ++;
+		nb++;
 	}
 	return (nb);
-}
-
-int	main(void)
-{
-	printf ("%d\n", ft_find_next_prime(90));
-	return (0);
 }

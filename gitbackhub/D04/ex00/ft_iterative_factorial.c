@@ -6,11 +6,11 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/10 19:35:17 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/11 15:20:43 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/17 09:11:08 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_iterative_factorial(int nb)
+int	ft_iterative_factorial(int nb)
 {
 	int	fact;
 
