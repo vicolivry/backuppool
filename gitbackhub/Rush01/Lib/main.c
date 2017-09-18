@@ -6,9 +6,11 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/17 14:56:20 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/18 15:29:58 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/18 17:54:28 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int		ft_checkchar(char *str, int argc);
 
@@ -47,8 +49,10 @@ void	ft_fill_grid(int grid[9][9], char **argv)
 }
 
 int		ft_find_unassigned(int grid[9][9], int *l, int *c)
-{
-	while (*l < 9)
+{	int x;
+	int y;
+
+		while (*l < 9)
 	{
 		while (*c < 9)
 		{
@@ -68,6 +72,7 @@ int		ft_solve_sudoku(int grid[9][9])
 	int col;
 	int number;
 
+
 	line = 0;
 	col = 0;
 	if (ft_find_unassigned(grid, &line, &col) == 0)
@@ -76,10 +81,18 @@ int		ft_solve_sudoku(int grid[9][9])
 	while (number <= 9)
 	{
 		if (ft_safe_nb(grid, line, col, number) == 1)
+		{
 			grid[line][col] = number;
-		if (ft_solve_sudoku(grid) == 1)
-			return (1);
+			if (ft_solve_sudoku(grid) == 1)
+			{
+				printf("Sudoku resolu");
+				return (1);
+			}
+		}
+		grid[line][col] = number;
+		number++;
 	}
+	printf("sudoku non resolu");
 	return (0);
 }
 
@@ -93,7 +106,7 @@ int		main(int argc, char **argv)
 	j = 0;
 	while (j < argc - 1)
 	{
-				if (ft_checkchar(argv[j + 1], argc) == 0)
+		if (ft_checkchar(argv[j + 1], argc) == 0)
 		{
 			ft_putstr("Error\n");
 			return (0);
@@ -106,12 +119,16 @@ int		main(int argc, char **argv)
 //		ft_putstr("Error\n");
 //		return (0);
 //	}
-	while (i < argc - 1)
-	{
-		ft_special_putstr(grid[i]);
-		ft_putchar('\n');
-		i++;
-	}
+//	else
+		if (ft_solve_sudoku(grid))
+		{
+		while (i < argc - 1)
+		{
+			ft_special_putstr(grid[i]);
+			ft_putchar('\n');
+			i++;
+		}
+		}
 	return (0);
 }
 
