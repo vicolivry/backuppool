@@ -6,7 +6,7 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/17 14:56:20 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/18 17:54:28 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/18 18:23:53 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_find_unassigned(int grid[9][9], int *l, int *c)
 {	int x;
 	int y;
 
-		while (*l < 9)
+	while (*l < 9)
 	{
 		while (*c < 9)
 		{
@@ -114,21 +114,21 @@ int		main(int argc, char **argv)
 		j++;
 	}
 	ft_fill_grid(grid, argv);
-//	if (ft_solve_sudoku(grid) == 0)
-//	{
-//		ft_putstr("Error\n");
-//		return (0);
-//	}
-//	else
-		if (ft_solve_sudoku(grid))
-		{
+	//	if (ft_solve_sudoku(grid) == 0)
+	//	{
+	//		ft_putstr("Error\n");
+	//		return (0);
+	//	}
+	//	else
+	if (ft_solve_sudoku(grid))
+	{
 		while (i < argc - 1)
 		{
 			ft_special_putstr(grid[i]);
 			ft_putchar('\n');
 			i++;
 		}
-		}
+	}
 	return (0);
 }
 

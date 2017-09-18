@@ -6,7 +6,7 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 11:41:33 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/18 17:47:32 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/18 18:21:30 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,7 @@ int	ft_safe_line_col(int grid[9][9], int x, int y, int nb)
 
 	cursor = 0;
 	printf("ft safe line col\n");
-	while (cursor < 9)
-/*	{
-		if (grid[x][cursor] == nb)
-			return (0);
-		cursor++;
-	}
-	cursor = 0;
-	while (cursor < 9)
-	{
-		if (grid[cursor][y] == nb)
-			return (0);
-		cursor++;
-	}
-	*/
+	while (cursor < 8)
 	{
 		if (grid[x][cursor] == nb || grid[y][cursor] == nb)
 			return (0);
