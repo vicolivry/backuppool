@@ -6,17 +6,11 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/16 19:29:01 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/17 11:54:28 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/19 16:07:05 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -65,7 +59,7 @@ char	**ft_sort_params(int argc, char **argv)
 			i++;
 		}
 		i = 1;
-		j = j + 1;
+		j++;
 	}
 	return (argv);
 }
