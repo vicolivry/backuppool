@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncomp.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/13 20:18:12 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/13 20:32:31 by volivry          ###   ########.fr       */
+/*   Created: 2017/09/17 19:57:40 by volivry           #+#    #+#             */
+/*   Updated: 2017/09/20 17:30:58 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
+	if (n == 0)
+		return (0);
 	i = 0;
-	while (str[i] != '\0')
+	while (i < n && s1[i] != '\0' && s1[i] == s2[i])
 		i++;
-	return (i);
-}
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int	i;
-	int	result;
-
-	i = 0;
-	while (i < n)
-	{
-		result = s1[i] - s2[i];
-		if (result != (0))
-			return (result);
-		i++;
-	}
-	return (0);
+	return (s1[i] - s2[i]);
 }

@@ -6,11 +6,9 @@
 /*   By: volivry <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/14 20:10:39 by volivry           #+#    #+#             */
-/*   Updated: 2017/09/15 10:22:56 by volivry          ###   ########.fr       */
+/*   Updated: 2017/09/19 09:57:26 by volivry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c)
 {
@@ -71,10 +69,4 @@ void	ft_putnbr_base(int nbr, char *base)
 		}
 		ft_putchar(base[nbr]);
 	}
-}
-
-int		main()
-{
-	ft_putnbr_base(1238, "A+BCD");
-	return (0);
 }
